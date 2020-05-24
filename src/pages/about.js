@@ -20,8 +20,8 @@ const AboutPage = ({ data: { site } }) => {
 						height          : "538px",
 					}}
 				>
-					<h1 className='post-title'>About Victor Ali</h1>
-					<p>Hi I am Victor Ali the owner of Jesus is our message &rarr;</p>
+					<h1 className='post-title'>About JIM</h1>
+					<p>Hi I am Victor Ali the founder of Jesus is our message &rarr;</p>
 				</div>
 				<div
 					style={{
