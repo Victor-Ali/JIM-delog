@@ -61,12 +61,9 @@ collections:
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
       - { name: tags, label: Tags }
+      - { name: category, label: Category }
       - label: Meta Description
         name: metaDescription
-        widget: text
-        required: false
-      - label: Category
-        name: category
         widget: text
         required: false
       - label: Featured Image
