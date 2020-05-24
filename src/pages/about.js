@@ -11,9 +11,15 @@ const AboutPage = ({ data: { site } }) => {
 				<meta name='description' content={"About page of " + site.siteMetadata.description} />
 			</Helmet>
 			<div className='two-grids -contact'>
-				<div className='post-thumbnail'>
-					<h1 className='post-title'>Get in Touch</h1>
-					<p>Let me help you kick start your next project &rarr;</p>
+				<div
+					className='post-thumbnail'
+					style={{
+						backgroundImage : `url('/assets/Bro-Victor-Photo.jpg')`,
+						marginBottom    : 0,
+					}}
+				>
+					<h1 className='post-title'>About Victor Ali</h1>
+					<p>Hi I am Victor Ali the owner of Jesus is our message &rarr;</p>
 				</div>
 				<div>
 					<form
