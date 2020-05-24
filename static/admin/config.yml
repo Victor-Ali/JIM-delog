@@ -60,8 +60,13 @@ collections:
         hint: "Path must start with /"
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
+      - { name: tags, label: Tags }
       - label: Meta Description
         name: metaDescription
+        widget: text
+        required: false
+     - label: Category
+        name: category
         widget: text
         required: false
       - label: Featured Image
@@ -74,8 +79,8 @@ collections:
             multiple: false
       - { name: body, label: Body, widget: markdown }
       fields:
-      - { label: Name, name: name, widget: string }
+    #   - { label: Name, name: name, widget: string }
       - { label: Bio, name: bio, widget: string }
-      - { label: Featured, name: featured, widget: boolean, default: false }
-      - { label: Avatar, name: avatar, widget: image }
+    #   - { label: Featured, name: featured, widget: boolean, default: false }
+    #   - { label: Avatar, name: avatar, widget: image }
       - { label: Social, name: social, widget: list, collapsed: false, field: { label: URL, name: url, widget: string } }
