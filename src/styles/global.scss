@@ -179,7 +179,7 @@ a {
   //background-image: url('/assets/circles-light.png');
   background-color: var(--featured-bg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   border-radius: 18px;
   margin-bottom: 36px;
