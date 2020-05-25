@@ -14,6 +14,10 @@ collections:
         label: Config
         file: site-meta-data.json
         fields:
+        # - { label: Featured, name: featured, widget: boolean, default: false }
+          - { label: Avatar, name: avatar, widget: image }
+          - { label: Social, name: social, widget: list, collapsed: false, field: { label: URL, name: url, widget: string } }
+
           - widget: string
             name: title
             label: Site Title
@@ -74,9 +78,3 @@ collections:
         media_library:
           config:
             multiple: false
-      - { name: body, label: Body, widget: markdown }
-    # - { label: Name, name: name, widget: string }
-      - { label: Bio, name: bio, widget: string }
-    # - { label: Featured, name: featured, widget: boolean, default: false }
-    # - { label: Avatar, name: avatar, widget: image }
-      - { label: Social, name: social, widget: list, collapsed: false, field: { label: URL, name: url, widget: string } }
