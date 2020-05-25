@@ -15,7 +15,6 @@ const AboutPage = ({ data: { site } }) => {
 					className='post-thumbnail'
 					style={{
 						backgroundImage : `url('/assets/Bro-Victor-Photo.jpg')`,
-						backgroundColor : `transparent`,
 						marginBottom    : 0,
 						height          : "538px",
 					}}
