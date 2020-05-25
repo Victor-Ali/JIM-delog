@@ -16,8 +16,8 @@ collections:
         fields:
         # - { label: Featured, name: featured, widget: boolean, default: false }
           - { label: Avatar, name: avatar, widget: image }
-          - { label: Social, name: social, widget: list, collapsed: false, field: { label: URL, name: url, widget: string } }
-
+          - { label: Bio, name: bio, widget: string }
+          - { label: Bio-Social, name: bio-social, widget: list, collapsed: false, field: { label: URL, name: url, widget: string } }
           - widget: string
             name: title
             label: Site Title
@@ -45,6 +45,7 @@ collections:
                 label: Description
                 default: ''
                 required: false
+          - { label: Site-Social, name: site-social, widget: list, collapsed: false, field: { label: URL, name: url, widget: string } }
   - name: blog
     label: Blog
     folder: _data/blog
