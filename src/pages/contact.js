@@ -16,26 +16,34 @@ const ContactPage = ({ data: { site } }) => {
 					<p>Leave me a message for prayer, counselling etc. &rarr;</p>
 				</div>
 				<div>
-					<form method='post' netlify-honeypot='bot-field' data-netlify='true'>
+					<form
+						name='contact'
+						method='post'
+						netlify-honeypot='bot-field'
+						data-netlify='true'
+						className='form-container'
+					>
 						<div>
-							<label htmlFor='w3bName'>Name</label>
+							<label style={{ display: "none" }} htmlFor='w3bName'>
+								Bname
+							</label>
 							<input type='hidden' name='bot-field' />
 						</div>
 						<div>
-							<label htmlFor='w3lName'>Name</label>
-							<input type='text' name='w3lName' id='w3lName' />
+							<label htmlFor='name'>Name</label>
+							<input type='text' name='name' id='name' />
 						</div>
 						<div>
-							<label htmlFor='w3lSender'>Email</label>
-							<input type='email' name='w3lSender' id='w3lSender' />
+							<label htmlFor='email'>Email</label>
+							<input type='email' name='email' id='email' />
 						</div>
 						<div>
-							<label htmlFor='w3lSubject'>Subject</label>
-							<input type='text' name='w3lSubject' id='w3lSubject' />
+							<label htmlFor='subject'>Subject</label>
+							<input type='text' name='subject' id='subject' />
 						</div>
 						<div>
-							<label htmlFor='w3lMessage'>Message</label>
-							<textarea name='w3lMessage' id='w3lMessage' />
+							<label htmlFor='message'>Message</label>
+							<textarea name='message' id='message' />
 						</div>
 						<div style={{ display: "flex", justifyContent: "flex-end" }}>
 							<input type='submit' className='button -primary' style={{ marginRight: 0 }} />
