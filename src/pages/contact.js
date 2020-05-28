@@ -3,6 +3,10 @@ import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 
+function encode (data) {
+	return Object.keys(data).map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])).join("&");
+}
+
 const ContactPage = ({ data: { site } }) => {
 	const [ state, setState ] = useState({});
 
