@@ -19,16 +19,13 @@ const ContactPage = ({ data: { site } }) => {
 					<form
 						name='contact'
 						method='post'
-						netlify-honeypot='bot-field'
 						data-netlify='true'
+						data-netlify-honeypot='bot-field'
+						action='/'
 						className='form-container'
 					>
-						<div>
-							<label style={{ display: "none" }} htmlFor='w3bName'>
-								Bname
-							</label>
-							<input type='hidden' name='bot-field' />
-						</div>
+						<input type='hidden' name='form-name' value='contact' />
+
 						<div>
 							<label htmlFor='name'>Name</label>
 							<input type='text' name='name' id='name' />
