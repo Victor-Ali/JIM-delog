@@ -16,11 +16,11 @@ const ContactPage = ({ data: { site } }) => {
 					<p>Leave me a message for prayer, counselling etc. &rarr;</p>
 				</div>
 				<div>
-					<form
-						className='form-container'
-						action='https://sendmail.w3layouts.com/SubmitContactForm'
-						method='post'
-					>
+					<form method='post' netlify-honeypot='bot-field' data-netlify='true'>
+						<div>
+							<label htmlFor='w3bName'>Name</label>
+							<input type='hidden' name='bot-field' />
+						</div>
 						<div>
 							<label htmlFor='w3lName'>Name</label>
 							<input type='text' name='w3lName' id='w3lName' />
