@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Helmet from "react-helmet";
+import { navigate } from "gatsby-link";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 
@@ -15,6 +16,7 @@ const ContactPage = ({ data: { site } }) => {
 	};
 
 	const handleSubmit = (e) => {
+		console.log("state", { ...state });
 		e.preventDefault();
 		const form = e.target;
 		fetch("/", {
@@ -69,7 +71,14 @@ const ContactPage = ({ data: { site } }) => {
 							<textarea name='message' id='message' onChange={handleChange} />
 						</div>
 						<div style={{ display: "flex", justifyContent: "flex-end" }}>
-							<input type='submit' className='button -primary' style={{ marginRight: 0 }} />
+							<button
+								type='submit'
+								onsubmit={handleSubmit}
+								className='button -primary'
+								style={{ marginRight: 0 }}
+							>
+								Submit
+							</button>
 						</div>
 					</form>
 				</div>
