@@ -1,30 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 
 const ContactPage = ({ data: { site } }) => {
-	const [ state, setState ] = useState({});
-
-	const handleChange = (e) => {
-		setState({ ...state, [e.target.name]: e.target.value });
-	};
-
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		const form = e.target;
-		fetch("/", {
-			method  : "POST",
-			headers : { "Content-Type": "application/x-www-form-urlencoded" },
-			body    : encode({
-				"form-name" : form.getAttribute("name"),
-				...state,
-			}),
-		})
-			.then(() => navigate(form.getAttribute("action")))
-			.catch((error) => alert(error));
-	};
-
 	return (
 		<Layout>
 			<Helmet>
@@ -37,35 +16,23 @@ const ContactPage = ({ data: { site } }) => {
 					<p>Leave me a message for prayer, counselling etc. &rarr;</p>
 				</div>
 				<div>
-					<form
-						name='contact'
-						method='post'
-						action='/thanks/'
-						data-netlify='true'
-						data-netlify-honeypot='bot-field'
-						className='form-container'
-					>
-						<input type='hidden' name='form-name' value='contact' />
-						<div hidden>
-							<label htmlFor='bot-field'>
-								Don’t fill this out: <input name='bot-field' onChange={handleChange} />
-							</label>
-						</div>
+					<form name='contact' method='POST' action='/' data-netlify='true' className='form-container'>
+						<input type='hidden' name='bot-field' value='Contact' />
 						<div>
 							<label htmlFor='name'>Name</label>
-							<input type='text' name='name' id='name' onChange={handleChange} />
+							<input type='text' name='name' id='name' />
 						</div>
 						<div>
 							<label htmlFor='email'>Email</label>
-							<input type='email' name='email' id='email' onChange={handleChange} />
+							<input type='email' name='email' id='email' />
 						</div>
 						<div>
 							<label htmlFor='subject'>Subject</label>
-							<input type='text' name='subject' id='subject' onChange={handleChange} />
+							<input type='text' name='subject' id='subject' />
 						</div>
 						<div>
 							<label htmlFor='message'>Message</label>
-							<textarea name='message' id='message' onChange={handleChange} />
+							<textarea name='message' id='message' />
 						</div>
 						<div style={{ display: "flex", justifyContent: "flex-end" }}>
 							<input type='submit' className='button -primary' style={{ marginRight: 0 }} />
