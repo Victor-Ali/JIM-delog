@@ -16,7 +16,8 @@ const ContactPage = ({ data: { site } }) => {
 					<p>Leave me a message for prayer, counselling etc. &rarr;</p>
 				</div>
 				<div>
-					<form netlify name='contact' method='post' action='/' className='form-container'>
+					<form name='contact' method='POST' action='/' data-netlify='true' className='form-container'>
+						<input type='hidden' name='form-name' value='contact' />
 						<div>
 							<label htmlFor='name'>Name</label>
 							<input type='text' name='name' id='name' />
