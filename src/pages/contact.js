@@ -10,6 +10,7 @@ const ContactPage = ({ data: { site } }) => {
 				<title>Contact — {site.siteMetadata.title}</title>
 				<meta name='description' content={"Contact page of " + site.siteMetadata.description} />
 			</Helmet>
+			{/* This should work well */}
 			<div className='two-grids -contact'>
 				<div className='post-thumbnail'>
 					<h1 className='post-title'>Get in Touch</h1>
