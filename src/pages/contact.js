@@ -45,17 +45,13 @@ const ContactPage = ({ data: { site } }) => {
 					<form
 						name='contact'
 						method='post'
-						action='/thanks/'
 						data-netlify='true'
 						data-netlify-honeypot='bot-field'
+						action='/'
 						className='form-container'
 					>
 						<input type='hidden' name='form-name' value='contact' />
-						<div hidden>
-							<label htmlFor='bot-field'>
-								Don’t fill this out: <input name='bot-field' onChange={handleChange} />
-							</label>
-						</div>
+
 						<div>
 							<label htmlFor='name'>Name</label>
 							<input type='text' name='name' id='name' onChange={handleChange} />
