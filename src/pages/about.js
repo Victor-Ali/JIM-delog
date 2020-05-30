@@ -14,9 +14,10 @@ const AboutPage = ({ data: { site } }) => {
 				<div
 					className='post-thumbnail'
 					style={{
-						backgroundImage : `url('/assets/Bro-Victor-Photo.jpg')`,
-						marginBottom    : 0,
-						height          : "538px",
+						backgroundImage    : `url('/assets/victor-ali.jpg')`,
+						marginBottom       : 0,
+						height             : "538px",
+						backgroundPosition : "top",
 					}}
 				>
 					<h1 className='post-title'>About JIM</h1>
