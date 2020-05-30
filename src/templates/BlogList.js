@@ -53,7 +53,7 @@ const IndexPage = ({ data: { site, allMarkdownRemark: { edges } }, pageContext }
 									textDecoration : "none",
 									padding        : "5px 10px",
 									color          : i + 1 === currentPage ? "#ffffff" : "",
-									background     : i + 1 === currentPage ? "#007acc" : "",
+									background     : i + 1 === currentPage ? "#000000" : "",
 								}}
 							>
 								{i + 1}

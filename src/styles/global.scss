@@ -9,11 +9,11 @@ body {
   margin-top: 0
 }
 body.light {
-  --primary-color: #381696;
+  --primary-color: #186be7;
   --primary-text-color: #fff;
-  --featured-bg: #493b8a;
+  --featured-bg: #186be7;
   --featured-text: #fff;
-  --secondary-color: #10072b;
+  --secondary-color: #2876e9;
   --background: #fff;
   --site-header: var(--background);
   --card-bg: #fff;
@@ -23,7 +23,7 @@ body.light {
   --btn-bdr: #d3d6e7;
   --btn-text-color: #868892;
   --btn-hover-bg: var(--btn-bdr);
-  --btn-hover-text-color: #00062b;
+  --btn-hover-text-color: #2876e9;
   --contact-bg: #f7f8fe;
   --contact-bdr: #d3d6e7;
   --input-bg: var(--background);
