@@ -24,48 +24,49 @@ const IndexPage = ({ data: { site, allMarkdownRemark: { edges } }, pageContext }
 			<HeroHeader />
 			<h2>Message List &darr;</h2>
 			<div className='grids'>{Posts}</div>
-			<ul
-				style={{
-					display    : "flex",
-					flexWrap   : "wrap",
-					// justifyContent : "space-between",
-					alignItems : "center",
-					listStyle  : "none",
-					padding    : 0,
-				}}
-			>
-				{!isFirst && (
-					<Link to={prevPage} rel='prev'>
-						← Previous Page
-					</Link>
-				)}
-				{Array.from({ length: numPages }, (_, i) => (
-					<li
-						key={`pagination-number${i + 1}`}
-						style={{
-							margin  : 0,
-							padding : "11px",
-						}}
-					>
-						<Link
-							to={`/${i === 0 ? "" : i + 1}`}
+			<div style={{ marginTop: "45px" }}>
+				<ul
+					style={{
+						display    : "flex",
+						flexWrap   : "wrap",
+						alignItems : "center",
+						listStyle  : "none",
+						padding    : 0,
+					}}
+				>
+					{!isFirst && (
+						<Link style={{ textDecoration: "none" }} to={prevPage} rel='prev'>
+							← Previous Page
+						</Link>
+					)}
+					{Array.from({ length: numPages }, (_, i) => (
+						<li
+							key={`pagination-number${i + 1}`}
 							style={{
-								textDecoration : "none",
-								padding        : "5px 10px",
-								color          : i + 1 === currentPage ? "#ffffff" : "",
-								background     : i + 1 === currentPage ? "#007acc" : "",
+								margin  : 0,
+								padding : "11px",
 							}}
 						>
-							{i + 1}
+							<Link
+								to={`/${i === 0 ? "" : i + 1}`}
+								style={{
+									textDecoration : "none",
+									padding        : "5px 10px",
+									color          : i + 1 === currentPage ? "#ffffff" : "",
+									background     : i + 1 === currentPage ? "#007acc" : "",
+								}}
+							>
+								{i + 1}
+							</Link>
+						</li>
+					))}
+					{!isLast && (
+						<Link style={{ textDecoration: "none" }} to={nextPage} rel='next'>
+							Next Page →
 						</Link>
-					</li>
-				))}
-				{!isLast && (
-					<Link to={nextPage} rel='next'>
-						Next Page →
-					</Link>
-				)}
-			</ul>
+					)}
+				</ul>
+			</div>
 		</Layout>
 	);
 };
