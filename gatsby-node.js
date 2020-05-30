@@ -2,8 +2,8 @@ const path = require(`path`);
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
 	const { createPage } = actions;
-
-	const blogPostTemplate = path.resolve(`src/templates/blogList.js`);
+	const blogPostTemplates = path.resolve(`src/templates/blogList.js`);
+	const blogPostTemplate = path.resolve(`src/templates/blogTemplate.js`);
 
 	const result = await graphql(`
     {
@@ -35,7 +35,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 	Array.from({ length: numPages }).forEach((_, i) => {
 		createPage({
 			path      : i === 0 ? `/` : `/${i + 1}`,
-			component : blogPostTemplate,
+			component : blogPostTemplates,
 			context   : {
 				limit       : postsPerPage,
 				skip        : i * postsPerPage,
@@ -45,11 +45,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 		});
 	});
 
-	// result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-	// 	createPage({
-	// 		path      : node.frontmatter.path,
-	// 		component : blogPostTemplate,
-	// 		context   : {}, // additional data can be passed via context
-	// 	});
-	// });
+	posts.forEach(({ node }) => {
+		createPage({
+			path      : node.frontmatter.path,
+			component : blogPostTemplate,
+			context   : {}, // additional data can be passed via context
+		});
+	});
 };
