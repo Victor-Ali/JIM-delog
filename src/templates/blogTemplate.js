@@ -33,6 +33,7 @@ export default function Template ({ data }) {
 					)}
 					<div className='blog-post-content' dangerouslySetInnerHTML={{ __html: html }} />
 				</article>
+
 				<div className={"comment-box"}>
 					<FacebookProvider appId='268317461242640'>
 						<Comments href={`http://jesusisourmessage.com${frontmatter.path}`} />
