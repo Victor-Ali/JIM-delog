@@ -21,17 +21,17 @@ const IndexPage = ({ data: { site, allMarkdownRemark: { edges } } }) => {
 		</Layout>
 	);
 };
-
 export default IndexPage;
+
 export const pageQuery = graphql`
-	query indexPageQuery {
+	query indexPageQuery($skip: Int!, $limit: Int!) {
 		site {
 			siteMetadata {
 				title
 				description
 			}
 		}
-		allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+		allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }, limit: $limit, skip: $skip) {
 			edges {
 				node {
 					id

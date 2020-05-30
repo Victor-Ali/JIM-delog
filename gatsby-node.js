@@ -3,7 +3,7 @@ const path = require(`path`);
 exports.createPages = async ({ actions, graphql, reporter }) => {
 	const { createPage } = actions;
 
-	const blogPostTemplate = path.resolve(`src/templates/blogTemplate.js`);
+	const blogPostTemplate = path.resolve(`src/templates/blogList.js`);
 
 	const result = await graphql(`
     {
@@ -29,11 +29,27 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 		return;
 	}
 
-	result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+	const posts = result.data.allMarkdownRemark.edges;
+	const postsPerPage = 6;
+	const numPages = Math.ceil(posts.length / postsPerPage);
+	Array.from({ length: numPages }).forEach((_, i) => {
 		createPage({
-			path      : node.frontmatter.path,
+			path      : i === 0 ? `/` : `/${i + 1}`,
 			component : blogPostTemplate,
-			context   : {}, // additional data can be passed via context
+			context   : {
+				limit       : postsPerPage,
+				skip        : i * postsPerPage,
+				numPages,
+				currentPage : i + 1,
+			},
 		});
 	});
+
+	// result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+	// 	createPage({
+	// 		path      : node.frontmatter.path,
+	// 		component : blogPostTemplate,
+	// 		context   : {}, // additional data can be passed via context
+	// 	});
+	// });
 };
