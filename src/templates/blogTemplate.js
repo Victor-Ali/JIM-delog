@@ -8,7 +8,6 @@ export default function Template ({ data }) {
 	const { site, markdownRemark } = data; // data.markdownRemark holds your post data
 	const { siteMetadata } = site;
 	const { frontmatter, html } = markdownRemark;
-	console.log("blog", data);
 	return (
 		<Layout>
 			<Helmet>
