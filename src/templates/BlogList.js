@@ -26,12 +26,12 @@ const IndexPage = ({ data: { site, allMarkdownRemark: { edges } }, pageContext }
 			<div className='grids'>{Posts}</div>
 			<ul
 				style={{
-					display        : "flex",
-					flexWrap       : "wrap",
-					justifyContent : "space-between",
-					alignItems     : "center",
-					listStyle      : "none",
-					padding        : 0,
+					display    : "flex",
+					flexWrap   : "wrap",
+					// justifyContent : "space-between",
+					alignItems : "center",
+					listStyle  : "none",
+					padding    : 0,
 				}}
 			>
 				{!isFirst && (
@@ -43,13 +43,15 @@ const IndexPage = ({ data: { site, allMarkdownRemark: { edges } }, pageContext }
 					<li
 						key={`pagination-number${i + 1}`}
 						style={{
-							margin : 0,
+							margin  : 0,
+							padding : "11px",
 						}}
 					>
 						<Link
 							to={`/${i === 0 ? "" : i + 1}`}
 							style={{
 								textDecoration : "none",
+								padding        : "5px 10px",
 								color          : i + 1 === currentPage ? "#ffffff" : "",
 								background     : i + 1 === currentPage ? "#007acc" : "",
 							}}
