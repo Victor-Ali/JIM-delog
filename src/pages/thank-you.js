@@ -4,7 +4,6 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
 
 const ThankYou = ({ data: { site } }) => {
-	console.log("site", site);
 	return (
 		<Layout>
 			<Helmet>
