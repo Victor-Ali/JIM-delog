@@ -1,13 +1,21 @@
 {
-  "title": "JIM",
   "siteUrl": "https://jesusisourmessage/",
-  "description": "Jesus is our message",
   "bio": "Hello I am Ali Victor a Jesus Follower",
-  "avatar": "/assets/rsz_victor-ali.jpg",
-  "home": {
-    "title": "Hi! I'm Victor Ali",
-    "description": "You are welcome to my website. You have come to the right place at the right time. I'm very passionate about your eternal destiny and committed to your spiritual welfare. This is a site with lot to offer you with unlimited access to life transforming teaching of the word of God."
-  },
+  "thank-you-avatar": "/assets/smily4.png",
+  "bio-social": [
+    {
+      "name": "twitter",
+      "url": "https://twitter.com/#"
+    },
+    {
+      "name": "instagram",
+      "url": "https://instagram.com/#"
+    },
+    {
+      "name": "facebook",
+      "url": "https://facebook.com/#"
+    }
+  ],
   "site-social": [
     {
       "name": "twitter",
@@ -22,18 +30,12 @@
       "url": "https://facebook.com/#"
     }
   ],
-  "bio-social": [
-    {
-      "name": "twitter",
-      "url": "https://twitter.com/#"
-    },
-    {
-      "name": "instagram",
-      "url": "https://instagram.com/#"
-    },
-    {
-      "name": "facebook",
-      "url": "https://facebook.com/#"
-    }
-  ]
+  "title": "JIM",
+  "avatar": "/assets/rsz_victor-ali.jpg",
+  "description": "Jesus is our message",
+  "author-box-avatar": "/assets/author-box-photo.jpg",
+  "home": {
+    "title": "Hi! I'm Victor Ali",
+    "description": "You are welcome to my website. You have come to the right place at the right time. I'm very passionate about your eternal destiny and committed to your spiritual welfare. This is a site with lot to offer you with unlimited access to life transforming teaching of the word of God."
+  }
 }
