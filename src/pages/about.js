@@ -4,6 +4,7 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
 
 const AboutPage = ({ data: { site } }) => {
+	console.log("site", site);
 	return (
 		<Layout>
 			<Helmet>
@@ -14,7 +15,7 @@ const AboutPage = ({ data: { site } }) => {
 				<div
 					className='post-thumbnail'
 					style={{
-						backgroundImage    : `url('/assets/victor-ali.jpg')`,
+						backgroundImage    : `url(${site.siteMetadata.avatar})`,
 						marginBottom       : 0,
 						height             : "538px",
 						backgroundPosition : "top",
@@ -69,6 +70,7 @@ export const pageQuery = graphql`
 	query AboutPageQuery {
 		site {
 			siteMetadata {
+				avatar
 				title
 				description
 			}
