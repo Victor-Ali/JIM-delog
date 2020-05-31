@@ -30,14 +30,16 @@ const ThankYou = ({ data: { site } }) => {
 						lineHeight : "1.5",
 					}}
 				>
-					<h3 style={{ textAlign: "center" }}>JIM</h3>
-
+					{/* <h3 style={{ textAlign: "center" }}>JIM</h3> */}
+					<article style={{ display: "flex", justifyContent: "center" }}>
+						<img src={`/assets/smily4.png`} height={150} width={150} />
+					</article>
 					<article>
 						<p>
 							I am very happy to hear from you and I would do my best to revert as soon as possible.
 							Remain blessed.
 						</p>
-						<p>I greatly implore you to keep in touch with me on other platforms viz:</p>
+						<p>I greatly implore you to keep in touch with me on other platforms below:</p>
 					</article>
 				</div>
 			</div>
