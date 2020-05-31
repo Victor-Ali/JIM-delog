@@ -30,7 +30,6 @@ const ThankYou = ({ data: { site } }) => {
 						lineHeight : "1.5",
 					}}
 				>
-					{/* <h3 style={{ textAlign: "center" }}>JIM</h3> */}
 					<article style={{ display: "flex", justifyContent: "center" }}>
 						<img src={`${site.siteMetadata.thank_you_avatar}`} height={150} width={150} />
 					</article>

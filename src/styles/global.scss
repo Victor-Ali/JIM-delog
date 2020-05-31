@@ -176,7 +176,6 @@ a {
 .post-thumbnail {
   text-align: center;
   min-height: 380px;
-  //background-image: url('/assets/circles-light.png');
   background-color: var(--featured-bg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -414,3 +413,33 @@ body.light {
     // justify-content: center;
     margin-top: 85px;
 }
+
+
+.social-network {
+  vertical-align: top;
+  display: inline-block;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.social-network-wrapper {
+    max-width: 768px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding-top: 18px;
+    border-top: 1px solid #ededed
+}
+.mobile-social-share-message {
+    display: none;
+}
+
+@media all and (max-width: 480px) {
+    .social-share-message {
+        display: none;
+    }
+    .mobile-social-share-message {
+        display: inline;
+    }
+ }

@@ -5,12 +5,13 @@ import Layout from "../components/layout";
 import { FacebookProvider, Comments } from "react-facebook";
 import {
 	FacebookShareButton,
-	LinkedinShareButton,
 	TwitterShareButton,
 	WhatsappShareButton,
 	EmailShareButton,
 	PocketShareButton,
 } from "react-share";
+
+import { EmailIcon, FacebookIcon, PocketIcon, TwitterIcon, WhatsappIcon } from "react-share";
 
 export default function Template ({ data }) {
 	const { site, markdownRemark } = data; // data.markdownRemark holds your post data
@@ -41,14 +42,62 @@ export default function Template ({ data }) {
 					<div className='blog-post-content' dangerouslySetInnerHTML={{ __html: html }} />
 				</article>
 
-				<div className={"comment-box"}>
+				<div className='social-network-wrapper'>
+					<p className='social-share-message'>
+						<strong>I you are blessed, share this message:</strong>
+					</p>
+					<p className='mobile-social-share-message'>
+						<strong>Share message:</strong>
+					</p>
+					<section>
+						<article className={"social-network"}>
+							<FacebookShareButton
+								url={`${site.siteMetadata.siteUrl}${frontmatter.path}`}
+								quote={frontmatter.title}
+							>
+								<FacebookIcon size={30} />
+							</FacebookShareButton>
+						</article>
+						<article className={"social-network"}>
+							<TwitterShareButton
+								url={`${site.siteMetadata.siteUrl}${frontmatter.path}`}
+								quote={frontmatter.title}
+							>
+								<TwitterIcon size={30} />
+							</TwitterShareButton>
+						</article>
+						<article className={"social-network"}>
+							<WhatsappShareButton
+								url={`${site.siteMetadata.siteUrl}${frontmatter.path}`}
+								quote={frontmatter.title}
+							>
+								<WhatsappIcon size={30} />
+							</WhatsappShareButton>
+						</article>
+						<article className={"social-network"}>
+							<EmailShareButton subject={frontmatter.title} body={"This is recommended for you"}>
+								<EmailIcon size={30} />
+							</EmailShareButton>
+						</article>
+						<article className={"social-network"}>
+							<PocketShareButton
+								url={`${site.siteMetadata.siteUrl}${frontmatter.path}`}
+								quote={frontmatter.title}
+							>
+								<PocketIcon size={30} />
+							</PocketShareButton>
+						</article>
+					</section>
+				</div>
+
+				<section className={"comment-box"}>
 					<h4 style={{ textAlign: "center" }}>Leave a comment:</h4>
-					<section style={{ display: "flex", justifyContent: "center" }}>
+					<article style={{ display: "flex", justifyContent: "center" }}>
 						<FacebookProvider appId='268317461242640'>
 							<Comments href={`${site.siteMetadata.siteUrl}${frontmatter.path}`} />
 						</FacebookProvider>
-					</section>
-				</div>
+					</article>
+				</section>
 			</div>
 		</Layout>
 	);
