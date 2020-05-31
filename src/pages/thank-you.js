@@ -15,14 +15,14 @@ const ThankYou = ({ data: { site } }) => {
 				<div
 					className='post-thumbnail'
 					style={{
-						backgroundImage    : `url(/assets/thank-you)`,
+						backgroundImage    : `url(/assets/thank-you.jpg)`,
 						marginBottom       : 0,
 						height             : "538px",
 						backgroundPosition : "top",
 					}}
 				>
-					<h1 className='post-title'>About JIM</h1>
-					<p>Hi I am Victor Ali the founder of Jesus is our message &rarr;</p>
+					<h1 className='post-title'>Thank You</h1>
+					<p>for taking the time to reachout!</p>
 				</div>
 				<div
 					style={{
@@ -33,24 +33,12 @@ const ThankYou = ({ data: { site } }) => {
 					<h3 style={{ textAlign: "center" }}>JIM</h3>
 
 					<article>
-						<h3>Thank</h3>
-						<h1>You</h1>
 						<p>
-							I thank you for taking the time to reachout. You email is important to me and I would make
-							sure I revert at the as soon as possible. Stay blessed.
+							I am very happy to hear from you and I would do my best to revert as soon as possible.
+							Remain blessed.
 						</p>
+						<p>I greatly implore you to keep in touch with me on other platforms viz:</p>
 					</article>
-
-					<Link to='/contact'>
-						<div style={{ display: "flex", justifyContent: "flex-start" }}>
-							<input
-								type='submit'
-								className='button -primary'
-								value='Prayer & Counselling'
-								style={{ marginRight: 0, cursor: "pointer" }}
-							/>
-						</div>
-					</Link>
 				</div>
 			</div>
 		</Layout>
