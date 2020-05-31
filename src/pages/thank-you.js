@@ -1,9 +1,10 @@
 import React from "react";
 import Helmet from "react-helmet";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import Layout from "../components/layout";
 
 const ThankYou = ({ data: { site } }) => {
+	console.log("thank you bg", site.siteMetadata.thank_you_bg);
 	return (
 		<Layout>
 			<Helmet>
@@ -14,7 +15,7 @@ const ThankYou = ({ data: { site } }) => {
 				<div
 					className='post-thumbnail'
 					style={{
-						backgroundImage    : `url(/assets/thank-you.jpg)`,
+						backgroundImage    : `url(${site.siteMetadata.thank_you_bg})`,
 						marginBottom       : 0,
 						height             : "538px",
 						backgroundPosition : "top",
@@ -31,7 +32,7 @@ const ThankYou = ({ data: { site } }) => {
 				>
 					{/* <h3 style={{ textAlign: "center" }}>JIM</h3> */}
 					<article style={{ display: "flex", justifyContent: "center" }}>
-						<img src={`/assets/smily4.png`} height={150} width={150} />
+						<img src={`${site.siteMetadata.thank_you_avatar}`} height={150} width={150} />
 					</article>
 					<article>
 						<p>
@@ -51,6 +52,8 @@ export const pageQuery = graphql`
 		site {
 			siteMetadata {
 				avatar
+				thank_you_avatar
+				thank_you_bg
 				title
 				description
 			}

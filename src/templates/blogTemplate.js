@@ -3,6 +3,14 @@ import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import { FacebookProvider, Comments } from "react-facebook";
+import {
+	FacebookShareButton,
+	LinkedinShareButton,
+	TwitterShareButton,
+	WhatsappShareButton,
+	EmailShareButton,
+	PocketShareButton,
+} from "react-share";
 
 export default function Template ({ data }) {
 	const { site, markdownRemark } = data; // data.markdownRemark holds your post data
@@ -34,9 +42,12 @@ export default function Template ({ data }) {
 				</article>
 
 				<div className={"comment-box"}>
-					<FacebookProvider appId='268317461242640'>
-						<Comments href={`http://jesusisourmessage.com${frontmatter.path}`} />
-					</FacebookProvider>
+					<h4 style={{ textAlign: "center" }}>Leave a comment:</h4>
+					<section style={{ display: "flex", justifyContent: "center" }}>
+						<FacebookProvider appId='268317461242640'>
+							<Comments href={`${site.siteMetadata.siteUrl}${frontmatter.path}`} />
+						</FacebookProvider>
+					</section>
 				</div>
 			</div>
 		</Layout>
@@ -48,6 +59,7 @@ export const pageQuery = graphql`
 		site {
 			siteMetadata {
 				title
+				siteUrl
 			}
 		}
 		markdownRemark(frontmatter: { path: { eq: $path } }) {
