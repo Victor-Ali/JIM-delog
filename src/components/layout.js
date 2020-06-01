@@ -37,7 +37,7 @@ export default ({ children }) => {
 					&copy; {new Date().getFullYear()} Calvary greetings from{" "}
 					<a href='https://jesusisourmessage.com'>JIM</a>
 				</p>
-				<FollowUs size={"1rem"} color={"#777777"} />
+				<FollowUs size={"1.5rem"} color={"#777777"} />
 			</footer>
 		</div>
 	);
