@@ -2,6 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const ThankYou = ({ data: { site } }) => {
 	console.log("thank you bg", site.siteMetadata.thank_you_bg);
@@ -30,16 +31,43 @@ const ThankYou = ({ data: { site } }) => {
 						lineHeight : "1.5",
 					}}
 				>
-					<article style={{ display: "flex", justifyContent: "center" }}>
+					<article style={{ display: "flex", justifyContent: "center", marginTop: "8px" }}>
 						<img src={`${site.siteMetadata.thank_you_avatar}`} height={150} width={150} />
 					</article>
-					<article>
+					<article style={{ marginTop: "28px" }}>
 						<p>
 							I am very happy to hear from you and I would do my best to revert as soon as possible.
 							Remain blessed.
 						</p>
-						<p>I greatly implore you to keep in touch with me on other platforms below:</p>
+						<p>I greatly implore you to keep in touch with me on other platforms for more blessings.</p>
 					</article>
+
+					<section style={{ marginTop: "28px" }}>
+						<span style={{ display: "flex", justifyContent: "center", fontSize: "1rem" }}>
+							<strong>Stay Connected:</strong>
+						</span>
+						<article
+							style={{
+								display        : "flex",
+								fontSize       : "3rem",
+								justifyContent : "center",
+								alignItems     : "center",
+								padding        : "0px 14px 0px 0px",
+								color          : "#777777",
+								cursor         : "pointer",
+							}}
+						>
+							<span style={{ paddingRight: "15px" }}>
+								<FontAwesomeIcon icon={[ "fab", "facebook" ]} />
+							</span>
+							<span>
+								<FontAwesomeIcon icon={[ "fab", "twitter" ]} />
+							</span>
+							<span style={{ paddingLeft: "15px" }}>
+								<FontAwesomeIcon icon={[ "fab", "instagram" ]} />
+							</span>
+						</article>
+					</section>
 				</div>
 			</div>
 		</Layout>
