@@ -2,7 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import FollowUs from "../components/FollowUs";
 
 const ThankYou = ({ data: { site } }) => {
 	console.log("thank you bg", site.siteMetadata.thank_you_bg);
@@ -42,32 +42,7 @@ const ThankYou = ({ data: { site } }) => {
 						<p>I greatly implore you to keep in touch with me on other platforms for more blessings.</p>
 					</article>
 
-					<section style={{ marginTop: "28px" }}>
-						<span style={{ display: "flex", justifyContent: "center", fontSize: "1rem" }}>
-							<strong>Stay Connected:</strong>
-						</span>
-						<article
-							style={{
-								display        : "flex",
-								fontSize       : "3rem",
-								justifyContent : "center",
-								alignItems     : "center",
-								padding        : "0px 14px 0px 0px",
-								color          : "#777777",
-								cursor         : "pointer",
-							}}
-						>
-							<span style={{ paddingRight: "15px" }}>
-								<FontAwesomeIcon icon={[ "fab", "facebook" ]} />
-							</span>
-							<span>
-								<FontAwesomeIcon icon={[ "fab", "twitter" ]} />
-							</span>
-							<span style={{ paddingLeft: "15px" }}>
-								<FontAwesomeIcon icon={[ "fab", "instagram" ]} />
-							</span>
-						</article>
-					</section>
+					<FollowUs />
 				</div>
 			</div>
 		</Layout>
