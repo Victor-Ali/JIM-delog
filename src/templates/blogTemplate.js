@@ -20,9 +20,7 @@ export default function Template ({ data }) {
 	return (
 		<Layout>
 			<Helmet>
-				<title>
-					{frontmatter.title} | {siteMetadata.title}
-				</title>
+				<title>{frontmatter.title}}</title>
 				<meta name='description' content={frontmatter.metaDescription} />
 			</Helmet>
 			<div className='blog-post-container'>
@@ -44,7 +42,7 @@ export default function Template ({ data }) {
 
 				<div className='social-network-wrapper'>
 					<p className='social-share-message'>
-						<strong>I you are blessed, share this message:</strong>
+						<strong>If you are blessed, share this message:</strong>
 					</p>
 					<p className='mobile-social-share-message'>
 						<strong>Share message:</strong>
@@ -53,7 +51,7 @@ export default function Template ({ data }) {
 						<article className={"social-network"}>
 							<FacebookShareButton
 								url={`${site.siteMetadata.siteUrl}${frontmatter.path}`}
-								quote={frontmatter.title}
+								quote={"this messages is about me"}
 							>
 								<FacebookIcon size={30} />
 							</FacebookShareButton>
