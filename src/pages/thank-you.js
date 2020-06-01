@@ -42,7 +42,7 @@ const ThankYou = ({ data: { site } }) => {
 						<p>I greatly implore you to keep in touch with me on other platforms for more blessings.</p>
 					</article>
 
-					<FollowUs />
+					<FollowUs size={"3rem"} color={"#777777"} />
 				</div>
 			</div>
 		</Layout>

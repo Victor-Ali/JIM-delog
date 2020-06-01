@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const FollowUs = () => {
+const FollowUs = ({ size, color }) => {
 	return (
 		<section style={{ marginTop: "28px" }}>
 			<span style={{ display: "flex", justifyContent: "center", fontSize: "1rem" }}>
@@ -10,11 +10,11 @@ const FollowUs = () => {
 			<article
 				style={{
 					display        : "flex",
-					fontSize       : "3rem",
+					fontSize       : size,
 					justifyContent : "center",
 					alignItems     : "center",
 					padding        : "0px 14px 0px 0px",
-					color          : "#777777",
+					color,
 					cursor         : "pointer",
 				}}
 			>
