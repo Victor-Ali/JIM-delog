@@ -1,5 +1,5 @@
 import React from "react";
-import Helmet from "react-helmet";
+// import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import { FacebookProvider, Comments } from "react-facebook";
@@ -13,16 +13,19 @@ import {
 
 import { EmailIcon, FacebookIcon, PocketIcon, TwitterIcon, WhatsappIcon } from "react-share";
 
+// components
+import SEO from "../components/seo";
+
 export default function Template ({ data }) {
 	const { site, markdownRemark } = data; // data.markdownRemark holds your post data
-	const { siteMetadata } = site;
 	const { frontmatter, html } = markdownRemark;
 	return (
 		<Layout>
-			<Helmet>
+			<SEO description={frontmatter.metaDescription} title={frontmatter.title} image={frontmatter.thumbnail} />
+			{/* <Helmet>
 				<title>{frontmatter.title}}</title>
 				<meta name='description' content={frontmatter.metaDescription} />
-			</Helmet>
+			</Helmet> */}
 			<div className='blog-post-container'>
 				<article className='post'>
 					{!frontmatter.thumbnail && (
