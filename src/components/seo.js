@@ -23,6 +23,7 @@ const SEO = ({ title, description, image, article }) => {
 		<Helmet title={seo.title}>
 			<meta name='description' content={seo.description} />
 			<meta name='image' content={seo.image} />
+			<meta name='twitter:card' content='summary_large_image' />
 
 			{seo.url && <meta property='og:url' content={seo.url} />}
 
@@ -33,8 +34,6 @@ const SEO = ({ title, description, image, article }) => {
 			{seo.description && <meta property='og:description' content={seo.description} />}
 
 			{seo.image && <meta property='og:image' content={seo.image} />}
-
-			<meta name='twitter:card' content='summary_large_image' />
 
 			{seo.twitter && <meta name='twitter:creator' content={seo.twitter.url} />}
 
