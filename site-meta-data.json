@@ -4,9 +4,9 @@
   "description": "Jesus is our message",
   "bio": "Hello I am Ali Victor a Jesus Follower",
   "avatar": "/assets/rsz_victor-ali.jpg",
-  "author-box-avatar": "/assets/author-box-Photo.jpg",
-  "thank-you-avatar": "/assets/thank-you-avatar.png",
-  "thank-you-bg": "/assets/thank-you.jpg",
+  "author_box_avatar": "/assets/author_box_Photo.jpg",
+  "thank_you_avatar": "/assets/thank_you_avatar.png",
+  "thank-you-bg": "/assets/thank_you.jpg",
   "defaultImage": "/assets/JIM.png",
   "home": {
     "title": "Hi! I'm Victor Ali",
@@ -15,29 +15,29 @@
   "site-social": [
     {
       "name": "twitter",
-      "url": "https://twitter.com/#"
+      "url": "https://twitter.com/VictorAliJIM"
     },
     {
       "name": "instagram",
-      "url": "https://instagram.com/#"
+      "url": "https://www.instagram.com/victorali340/"
     },
     {
       "name": "facebook",
-      "url": "https://facebook.com/#"
+      "url": "https://www.facebook.com/ali.victor.921"
     }
   ],
   "bio-social": [
     {
       "name": "twitter",
-      "url": "https://twitter.com/#"
+      "url": "https://twitter.com/VictorAliJIM"
     },
     {
       "name": "instagram",
-      "url": "https://instagram.com/#"
+      "url": "https://www.instagram.com/victorali340/"
     },
     {
       "name": "facebook",
-      "url": "https://facebook.com/#"
+      "url": "https://www.facebook.com/ali.victor.921"
     }
   ]
 }

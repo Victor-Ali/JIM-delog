@@ -32,7 +32,12 @@ const ThankYou = ({ data: { site } }) => {
 					}}
 				>
 					<article style={{ display: "flex", justifyContent: "center", marginTop: "8px" }}>
-						<img src={`${site.siteMetadata.thank_you_avatar}`} height={150} width={150} />
+						<img
+							style={{ borderRadius: "100%" }}
+							src={`${site.siteMetadata.avatar}`}
+							height={150}
+							width={150}
+						/>
 					</article>
 					<article style={{ marginTop: "28px" }}>
 						<p>
@@ -53,6 +58,7 @@ const ThankYou = ({ data: { site } }) => {
 		</Layout>
 	);
 };
+
 export default ThankYou;
 export const pageQuery = graphql`
 	query ThankYouPageQuery {
