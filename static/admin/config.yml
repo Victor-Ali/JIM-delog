@@ -80,3 +80,5 @@ collections:
         media_library:
           config:
             multiple: false
+      - { name: body, label: body, widget: markdown }
+    
