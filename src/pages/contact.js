@@ -75,7 +75,7 @@ const ContactPage = ({ data: { site } }) => {
 								type='submit'
 								onsubmit={handleSubmit}
 								className='button -primary'
-								style={{ marginRight: 0 }}
+								style={{ marginRight: 0, cursor: "pointer" }}
 							>
 								Submit
 							</button>
