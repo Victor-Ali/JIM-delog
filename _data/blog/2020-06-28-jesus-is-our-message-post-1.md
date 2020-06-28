@@ -1,6 +1,6 @@
 ---
 template: BlogPost
-path: /jim-post1
+path: /jim-post17
 date: 2020-06-28T17:42:05.279Z
 title: Jesus is our message post 1
 tags: Faith
