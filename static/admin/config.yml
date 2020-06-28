@@ -59,11 +59,11 @@ collections:
           widget: hidden,
           default: BlogPost,
         }
-      - name: path
-        label: Path
-        widget: string
-        pattern: [/]
-        hint: "Path must start with /"
+    #   - name: path
+    #     label: Path
+    #     widget: string
+    #     pattern: [/]
+    #     hint: "Path must start with /"
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
       - { name: tags, label: Tags }
