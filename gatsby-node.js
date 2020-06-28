@@ -18,6 +18,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             frontmatter {
               path
             }
+            fields {
+                slug
+            }
           }
         }
       }
@@ -46,11 +49,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 		});
 	});
 
-	posts.forEach(({ node }) => {
+	posts.forEach((post) => {
 		createPage({
-			path      : node.frontmatter.path,
+			path      : post.node.fields.slug,
 			component : blogPostTemplate,
-			context   : {}, // additional data can be passed via context
+			context   : {
+				slug : post.node.fields.slug,
+			}, // additional data can be passed via context
 		});
 	});
 };
