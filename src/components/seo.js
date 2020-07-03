@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
-import { useLocation } from "@reach/router";
+// import { useLocation } from "@reach/router";
 import { useStaticQuery, graphql } from "gatsby";
 
 const SEO = ({ title, description, image, article }) => {
@@ -15,7 +15,7 @@ const SEO = ({ title, description, image, article }) => {
 	return (
 		<Helmet htmlAttributes={{ lang: "en" }} title={`${defaultTitle} | ${title}`}>
 			<meta name='description' content={description || defaultDescription} />
-			<meta name='image' content={image} />
+			<meta name='image' content={image || defaultImage} />
 			{/* twitter cards */}
 			<meta name='twitter:card' content='summary_large_image' />
 			{/* <meta name='twitter:creator' content={twitterUsername} /> */}
