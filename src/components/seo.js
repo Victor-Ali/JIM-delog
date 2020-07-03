@@ -5,43 +5,23 @@ import { useLocation } from "@reach/router";
 import { useStaticQuery, graphql } from "gatsby";
 
 const SEO = ({ title, description, image, article }) => {
-	const { pathname } = useLocation();
-	const { site } = useStaticQuery(query);
+	// const { pathname } = useLocation();
+	const data = useStaticQuery(query);
 
-	const { defaultTitle, defaultDescription, siteUrl, defaultImage, site_social } = site.siteMetadata;
-	const seo = {
-		title       : title || defaultTitle,
-		description : description || defaultDescription,
-		image       : `${siteUrl}${image || defaultImage}`,
-		url         : `${siteUrl}${pathname}`,
-		twitter     : site_social.find((item) => item.name === "twitter"),
-	};
+	const { defaultTitle, defaultDescription, siteUrl, defaultImage, site_social } = data.site.siteMetadata;
 
-	console.log("seo", seo);
+	console.log("seo", image);
 
 	return (
-		<Helmet title={seo.title}>
-			<meta name='description' content={seo.description} />
-			<meta name='image' content={seo.image} />
+		<Helmet htmlAttributes={{ lang: "en" }} title={`${defaultTitle} | ${title}`}>
+			<meta name='description' content={description || defaultDescription} />
+			<meta name='image' content={image} />
+			{/* twitter cards */}
 			<meta name='twitter:card' content='summary_large_image' />
-
-			{seo.url && <meta property='og:url' content={seo.url} />}
-
-			{(article ? true : null) && <meta property='og:type' content='article' />}
-
-			{seo.title && <meta property='og:title' content={seo.title} />}
-
-			{seo.description && <meta property='og:description' content={seo.description} />}
-
-			{seo.image && <meta property='og:image' content={seo.image} />}
-
-			{seo.twitter && <meta name='twitter:creator' content={seo.twitter.url} />}
-
-			{seo.title && <meta name='twitter:title' content={seo.title} />}
-
-			{seo.description && <meta name='twitter:description' content={seo.description} />}
-
-			{seo.image && <meta name='twitter:image' content={seo.image} />}
+			{/* <meta name='twitter:creator' content={twitterUsername} /> */}
+			<meta name='twitter:title' content={title} />
+			<meta name='twitter:description' content={description || defaultDescription} />
+			<meta name='twitter:image' content={`${siteUrl}${image}`} />
 		</Helmet>
 	);
 };

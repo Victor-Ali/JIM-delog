@@ -1,13 +1,13 @@
 {
   "title": "JIM",
-  "siteUrl": "https://jesusisourmessage.com/",  
-  "description": "Jesus is our message",
+  "siteUrl": "http://localhost:8000",  
+  "description": "Committed to your eternal destiney and spiritual welfare",
   "bio": "Hello I am Ali Victor a Jesus Follower",
   "avatar": "/assets/rsz_victor-ali.jpg",
   "author_box_avatar": "/assets/author_box_Photo.jpg",
   "thank_you_avatar": "/assets/thank_you_avatar.png",
   "thank-you-bg": "/assets/thank_you.jpg",
-  "defaultImage": "/assets/JIM.png",
+  "defaultImage": "/assets/jesus-is-our-message.png",
   "home": {
     "title": "Hi! I'm Victor Ali",
     "description": "You are welcome to my website. You have come to the right place at the right time. I'm very passionate about your eternal destiny and committed to your spiritual welfare. This is a site with lot to offer you with unlimited access to life transforming teaching of the word of God. :)"
