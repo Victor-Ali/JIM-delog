@@ -90,7 +90,6 @@ export default function Template ({ data }) {
 						</article>
 					</section>
 				</div>
-				<div class='sharethis-inline-share-buttons' />
 
 				<section className={"comment-box"}>
 					<h4 style={{ textAlign: "center" }}>Leave a comment:</h4>
