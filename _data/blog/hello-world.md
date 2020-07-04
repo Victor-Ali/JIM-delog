@@ -1,15 +1,13 @@
 ---
-template: BlogPost
 path: /hello-world
+template: BlogPost
 date: 2020-02-20T07:08:53.137Z
-title: Hello World From Lawrence
+title: FEAR NOT, ONLY BELIEVE
 tags: Faith
-category: Hello World
-metaDescription: Meta description for Hello World
+category: Faith
+metaDescription: "And they brought him unto him (Jesus) and when he saw him,
+  straightway the spirit tare him: and he fell on the ground, and wallowed
+  foaming."
 thumbnail: ""
 ---
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique fugiat delectus pariatur blanditiis nulla soluta ratione nostrum, harum maiores adipisci a quod nobis cupiditate quae odit unde qui sit consequuntur.
-
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique fugiat delectus pariatur blanditiis nulla soluta ratione nostrum, harum maiores adipisci a quod nobis cupiditate quae odit unde qui sit consequuntur.
-
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique fugiat delectus pariatur blanditiis nulla soluta ratione nostrum, harum maiores adipisci a quod nobis cupiditate quae odit unde qui sit consequuntur.
+In Mark 9:20-23 "And they brought him unto him (Jesus) and when he saw him, straightway the spirit tare him: and he fell on the ground, and wallowed foaming. And he asked his father, How long is it ago sine this came unto him? And he said. and of times it hath cast him into the fire, and into the water, to destroy him; but if thou canst do any thing, have compassion on us, and help us. Jesus said unto him, IF THOU CANST BELIEVE, ALL THINGS ARE POSSIBLE TO HIM THAT BELIEVETH". Here is a mountain of a problem. It is certainly a long standing demonic problem. Note what Jesus said: "IF THOU CANST BELIEVE, ALL THINGS ARE POSSIBLE TO HIM THAT BELIEVETH" Barren woman, "IF THOU (you) CANST BELIEVE, ALL THINGS ARE POSSIBLE TO HIM THAT BELIEVETH". The man on crutches, or on wheelchair, if you can believe, 'ALL THINGS ARE POSSIBLE TO HIM THAT BELIEVETH" To the woman who has been having miscarriages all through her married life, I say: "If THOU (you) CANST BELIEVE, ALL THINGS ARE POSSIBLE TO HIM THAT BELIEVETH" To the impotent man who weeps all day and causes his wife tears and sorrow all night, and the woman with issue of blood. I say IF THOU (you) CANST BELIEVE, ALL THINGS ARE POSSIBLE TO HIM THAT BELIEVETH" Amen! If the jobless can believe, "all things are possible to him that believeth" The dumb and stammerer will receive a miracle if he can believe. There is healing for the cancer patient tonight. When the man of God speak the miracle word of prayer and you believe in your heart, your healing and miracle is at hand. Hear this prophecy for this week, Mercy will cause heaven to single you out for a blessing in the midest of thousand or million competing for a common opportunity you will be singled out. I pray that God will give you grace to stay clear from sin, may the blood that will never lose it's power flowing from Emmanuel's veins wash and cleanse your soul from every stain. I command every sickness upon your body to be healed right away. It is the will of Christ that you be sound and whole in your body. Satan has no place any more in your life. I decree and declare you shall not die, the Lord who favoured Joseph will go with you to favour you this week. The God who fought for Israel will fight your battles. The One who blessed Abraham in all things will bless you. This is your season, I bless you with peace. I bless you with holiness. I bless you with favour. I bless you and you are blessed. Once again "IF THOU CANST BELIEVE, ALL THINGS ARE POSSIBLE TO HIM THAT BELIEVETH" I believe you are a believer. May God bless the reading of His word. God bless you
